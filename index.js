@@ -5,7 +5,8 @@ app.listen (8081, function (){
 	console.log ('listening http port');
 });
 
+app.use(express.static(__dirname + '/public'));
+
 app.get("/",function (req, res) {
-	console.log ('Test');
-	res.end('Hello World');
+	res.redirect("./index.html");
 });
