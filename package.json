@@ -1,4 +1,8 @@
 {
+  "name": "Poker",
+  "version": "1.0.0",
+  "description": "Test Module",
+  "main": "index.js",
   "dependencies": {
     "express": "^4.14.0"
   }
