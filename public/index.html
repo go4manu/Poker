@@ -21,12 +21,15 @@
             <input type="button" value="Join Scrum Planning" id="btnJoinMeeting" class="bigInput">
         </div>
     </div>
-    <script id="bookTemplate" type="text/x-jQuery-tmpl">
+
+    <script id="userTemplate" type="text/x-jQuery-tmpl">
         <div class='onlineUser'>
             <span>${name}</span>
             <span class="voting"></span>
         </div>
     </script>
-
+    <script id="buttonTemplate" type="text/x-jQuery-tmpl">
+        <div class='button btn${no}' data-ref='${no}'></div>
+    </script>
 </body>
 </html>
