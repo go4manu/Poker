@@ -1,5 +1,7 @@
 var http = require ('http');
 var express = require ('express');
+var meeting=require("./modules/meeting.js");
+
 var app = express();
 app.listen (8081, function (){
 	console.log ('listening http port');
@@ -11,6 +13,4 @@ app.get("/",function (req, res) {
 	res.redirect("./index.html");
 });
 
-app.post("/joinMeeting",function(req,res){
-	res.end("You will be joining session soon..");
-});
+app.get("/joinMeeting",meeting.startSession);
