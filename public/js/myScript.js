@@ -18,7 +18,14 @@ $(function() {
             return {"name": name};
         });
 
-        $("#bookTemplate").tmpl(usersWithId).appendTo("#dvBody");
+        $("#dvBody").append($("<div class='row2'></div>").append($("#userTemplate")
+            .tmpl(usersWithId)));
+        
+        var lstButton=[{"no":"0"},{"no":"1"},{"no":"2"},{"no":"3"},{"no":"5"},
+            {"no":"8"},{"no":"13"},{"no":"20"},{"no":"Q"}];
+
+           $("#dvBody").append($("<div class='row2'></div>").append($("#buttonTemplate")
+               .tmpl(lstButton)));
 	}
 });
 
