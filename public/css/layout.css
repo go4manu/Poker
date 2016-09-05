@@ -5,12 +5,13 @@ body{
     background:url("../img/poker.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: 100%;
+    background-color: black;
 }
 .dvBody{
     float:inherit;
     position: absolute;
-    top:40%;
+    top:400px;
     text-align: -webkit-center;
     width:100%;
 }
@@ -20,5 +21,15 @@ body{
 .row1{
     width: 100%;
     height: 100px;
-
+}
+.onlineUser{
+    background-image: url("../img/online.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    padding-left: 50px;
+    float: left;
+    margin-right: 20px;
+}
+.voting{
+    background-color:#444444;
 }

@@ -2,15 +2,23 @@ $(function() {
 	$("#btnJoinMeeting").click(function () {
 		$.ajax({
 			url : "/joinMeeting",
-			type :"post",
+			type :"get",
 			data : {
 				"sessionId": $("#txtSessionId").val(),
 				"userName": $("#txtName").val()
 			},
 			success : function(result) {
-				$("#dvBody").html(result);
+				renderResult(result);
 			}
 		});
 	});
+	var renderResult=function (jsonData) {
+        $("#dvBody").html("");
+        var usersWithId = JSON.parse(jsonData).names.map(function (name) {
+            return {"name": name};
+        });
+
+        $("#bookTemplate").tmpl(usersWithId).appendTo("#dvBody");
+	}
 });
 
